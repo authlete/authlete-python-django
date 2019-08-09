@@ -69,14 +69,14 @@ Contact Form : https://www.authlete.com/contact/
 | PR        | pr@authlete.com      |
 | Technical | support@authlete.com |
 
-[RFC6749]:              https://tools.ietf.org/html/rfc6749
-[OIDC]:                 https://openid.net/connect/
-[OIDCCore]:             http://openid.net/specs/openid-connect-core-1_0.html
-[Django]:               https://www.djangoproject.com/
-[DjangoOAuthServer]:    https://github.com/authlete/django-oauth-server/
-[DjangoResourceServer]: https://github.com/authlete/django-resource-server/
 [Authlete]:             https://www.authlete.com/
 [AuthleteAPI]:          https://docs.authlete.com/
 [AuthleteOverview]:     https://www.authlete.com/developers/overview/
 [AuthletePython]:       https://github.com/authlete/authlete-python/
+[Django]:               https://www.djangoproject.com/
+[DjangoOAuthServer]:    https://github.com/authlete/django-oauth-server/
+[DjangoResourceServer]: https://github.com/authlete/django-resource-server/
+[OIDC]:                 https://openid.net/connect/
+[OIDCCore]:             https://openid.net/specs/openid-connect-core-1_0.html
+[RFC6749]:              https://tools.ietf.org/html/rfc6749
 [UserInfoEndpoint]:     https://openid.net/specs/openid-connect-core-1_0.html#UserInfo
