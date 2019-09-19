@@ -66,7 +66,6 @@ release:
 
 
 test:
-	#$(PYTHON) -m unittest discover tests
 	$(PYTHON) -m unittest discover
 
 
