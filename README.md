@@ -21,15 +21,14 @@ applications are stored in the Authlete server on cloud.
 
 [django-oauth-server][DjangoOAuthServer] is an authorization server
 implementation which uses this library. It implements not only an authorization
-endpoint and a token endpoint but also a JWK Set endpoint, a configuration
-endpoint, an introspection endpoint and a revocation endpoint.
+endpoint and a token endpoint but also a JWK Set endpoint, a discovery endpoint,
+an introspection endpoint and a revocation endpoint.
 [django-resource-server][DjangoResourceServer] is a resource server
 implementation which also uses this library. It supports a
 [userinfo endpoint][UserInfoEndpoint] defined in
 [OpenID Connect Core 1.0][OIDCCore] and includes an example of a protected
-resource endpoint, too. Use these reference implementations as a starting
-point of your own implementations of an authorization server and a resource
-server.
+resource endpoint, too. Use these sample implementations as a starting point
+of your own implementations of an authorization server and a resource server.
 
 License
 -------

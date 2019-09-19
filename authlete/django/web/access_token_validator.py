@@ -123,10 +123,10 @@ class AccessTokenValidator(object):
         `introspectionResponse` property. Then, this method checks the value
         of the `action` parameter in the response from the API.
 
-        If the value of the `actino` parameter is `OK`, this method sets `True`
+        If the value of the `action` parameter is `OK`, this method sets `True`
         to the `valid` property and returns `True`.
 
-        If the value of the `actino` parameter is not `OK`, this method builds
+        If the value of the `action` parameter is not `OK`, this method builds
         an error response that should be returned to the client application and
         sets it to the `errorResponse` property. Then, this method sets `False`
         to the `valid` property and returns `False`.
@@ -197,7 +197,7 @@ class AccessTokenValidator(object):
 
     def __buildErrorFromException(self, cause):
         # The value for the WWW-Authenticate header.
-        challenge = 'Bearer error="server_error",error_description="Introspection APII call failed."'
+        challenge = 'Bearer error="server_error",error_description="Introspection API call failed."'
 
         # Build a response that complies with RFC 6749.
         return ResponseUtility.wwwAuthenticate(500, challenge)

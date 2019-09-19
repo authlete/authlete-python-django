@@ -146,7 +146,7 @@ class AuthorizationRequestBaseHandler(BaseRequestHandler):
             return ResponseUtility.okHtml(content)
         else:
             # 500 Internal Server Error
-            # The /api/auth/authorization/fapi API returned an unknown action.
+            # The /api/auth/authorization/fail API returned an unknown action.
             return self.unknownAction('/api/auth/authorization/fail')
 
 

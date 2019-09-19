@@ -21,13 +21,13 @@ Django (Python) 用 Authlete ライブラリ
 
 [django-oauth-server][DjangoOAuthServer] はこのライブラリを使用している認可サーバーの実装で、
 認可エンドポイントやトークンエンドポイントに加え、JWK Set エンドポイント、
-設定エンドポイント、取り消しエンドポイントの実装を含んでいます。
+ディスカバリーエンドポイント、取り消しエンドポイントの実装を含んでいます。
 また、[django-resource-server][DjangoResourceServer]
 はこのライブラリを使用しているリソースサーバーの実装です。 [OpenID Connect Core 1.0][OIDCCore]
 で定義されている[ユーザー情報エンドポイント][UserInfoEndpoint]
 をサポートし、また、保護リソースエンドポイントの例を含んでいます。
 あなたの認可サーバーおよびリソースサーバーの実装の開始点として、
-これらのリファレンス実装を活用してください。
+これらのサンプル実装を活用してください。
 
 ライセンス
 ----------
@@ -67,9 +67,9 @@ PyPI (Python Package Index)
 | 広報 | pr@authlete.com      |
 | 技術 | support@authlete.com |
 
-[Authlete]:             https://www.authlete.com/
+[Authlete]:             https://www.authlete.com/ja/
 [AuthleteAPI]:          https://docs.authlete.com/
-[AuthleteOverview]:     https://www.authlete.com/developers/overview/
+[AuthleteOverview]:     https://www.authlete.com/ja/developers/overview/
 [AuthletePython]:       https://github.com/authlete/authlete-python/
 [Django]:               https://www.djangoproject.com/
 [DjangoOAuthServer]:    https://github.com/authlete/django-oauth-server/

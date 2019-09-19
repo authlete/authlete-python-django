@@ -119,7 +119,7 @@ class TokenRequestBaseHandler(BaseRequestHandler):
             return ResponseUtility.badRequest(content)
         else:
             # 500 Internal Server Error
-            # The /api/auth/token/fapi API returned an unknown action.
+            # The /api/auth/token/fail API returned an unknown action.
             return self.unknownAction('/api/auth/token/fail')
 
 
