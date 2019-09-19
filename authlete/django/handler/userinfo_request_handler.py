@@ -64,7 +64,7 @@ class UserInfoRequestHandler(BaseRequestHandler):
 
         if accessToken is None:
             # 400 Bad Request with a WWW-Authenticate header.
-            return ResponseUtility.www.Authenticate(400,
+            return ResponseUtility.wwwAuthenticate(400,
                 'Bearer error="invalid_token",error_description="An access token is required."')
 
         # Call Authlete's /api/auth/userinfo API.

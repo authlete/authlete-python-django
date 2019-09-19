@@ -53,8 +53,8 @@ class ClaimCollector(object):
             if locale in localeSet:
                 continue
 
-            localeSet.add(key)
-            localeList.append(key)
+            localeSet.add(locale)
+            localeList.append(locale)
 
         if len(localeList) == 0:
             return None

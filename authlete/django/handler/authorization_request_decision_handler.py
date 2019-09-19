@@ -70,7 +70,7 @@ class AuthorizationRequestDecisionHandler(AuthorizationRequestBaseHandler):
         # If the subject of the user is not available.
         if subject is None:
             # The user is not authenticated.
-            return self.api.authorizationFail(ticket, AuthorizationFailReason.NOT_AUTHENTICATED)
+            return self.authorizationFail(ticket, AuthorizationFailReason.NOT_AUTHENTICATED)
 
         # Get the value of the "sub" claim. This is optional. When "sub" is None,
         # the value of "subject" will be used as the value of the "sub" claim.
