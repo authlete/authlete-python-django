@@ -24,11 +24,11 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="authlete-django",
-    version="1.0.0",
+    version="1.0.1",
     license="Apache License Version 2.0",
     author="Authlete, Inc.",
     author_email="admin@authlete.com",
-    description="Django library for Authlete",
+    description="Django Library for Authlete",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/authlete/authlete-python-django",
