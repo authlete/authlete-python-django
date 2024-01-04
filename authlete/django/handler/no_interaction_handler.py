@@ -79,7 +79,7 @@ class NoInteractionHandler(AuthorizationRequestBaseHandler):
 
         # Check 2: Max Age
         if self.__checkMaxAge(response, authTime) == False:
-            # The maximum authentication age has elapses since the last time
+            # The maximum authentication age has elapsed since the last time
             # when the user was authenticated.
             return self.authorizationFail(
                 response.ticket, AuthorizationFailReason.EXCEEDS_MAX_AGE)
@@ -157,7 +157,7 @@ class NoInteractionHandler(AuthorizationRequestBaseHandler):
             # Ne need to care about the subject.
             return True
 
-        # If the requested subject mtaches that of the current user.
+        # If the requested subject matches that of the current user.
         if requestedSubject == subject:
             # The subjects match.
             return True
@@ -184,7 +184,7 @@ class NoInteractionHandler(AuthorizationRequestBaseHandler):
 
         # If one of the requested ACRs must be satisfied.
         if response.acrEssential:
-            # None of the requested ACRs is satisified.
+            # None of the requested ACRs is satisfied.
             return False
 
         # The ACR satisfied when the current user was authenticated does not
