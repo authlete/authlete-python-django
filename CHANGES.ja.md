@@ -10,6 +10,24 @@
   - `created` メソッドを追加。
   - `tooLarge` メソッドを追加。
 
+- `TokenRequestBaseHandler` クラス
+  - 引数 `headers` を `tokenIssue` メソッドに追加。
+  - 引数 `headers` を `tokenFail` メソッドに追加。
+
+- `TokenRequestHandler` クラス
+  - MTLS (RFC 8705) をサポート。
+  - DPoP (RFC 9449) をサポート。
+  - Token Exchange (RFC 8693) をサポート。
+  - JWT Authorization Grant (RFC 7523) をサポート。
+
+- `TokenRequestHandlerSpi` クラス
+  - `tokenExchange` メソッドを追加。
+  - `jwtBearer` メソッドを追加。
+
+- `TokenRequestHandlerSpiAdapter` クラス
+  - `tokenExchange` メソッドを追加。
+  - `jwtBearer` メソッドを追加。
+
 - 新しい型
   - `ParRequestHandler` クラス
 

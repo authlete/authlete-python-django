@@ -10,6 +10,24 @@ CHANGES
   - Add the `created` method.
   - Add the `tooLarge` method.
 
+- `TokenRequestBaseHandler` class
+  - Add the `headers` argument to the `tokenIssue` method.
+  - Add the `headers` argument to the `tokenFail` method.
+
+- `TokenRequestHandler` class
+  - Support MTLS (RFC 8705).
+  - Support DPoP (RFC 9449).
+  - Support Token Exchange (RFC 8693).
+  - Support JWT Authorization Grant (RFC 7523).
+
+- `TokenRequestHandlerSpi` class
+  - Add the `tokenExchange` method.
+  - Add the `jwtBearer` method.
+
+- `TokenRequestHandlerSpiAdapter` class
+  - Add the `tokenExchange` method.
+  - Add the `jwtBearer` method.
+
 - New types
   - `ParRequestHandler` class
 

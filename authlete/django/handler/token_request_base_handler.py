@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 Authlete, Inc.
+# Copyright (C) 2019-2024 Authlete, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -39,13 +39,14 @@ class TokenRequestBaseHandler(BaseRequestHandler):
         super().__init__(api)
 
 
-    def tokenIssue(self, ticket, subject, properties):
-        """Call /api/auth/token/issue API.
+    def tokenIssue(self, ticket, subject, properties, headers=None):
+        """Call /auth/token/issue API.
 
         Args:
-            ticket (str)  : The ticket which has been issued previously from /api/auth/token API.
+            ticket (str)  : The ticket which has been issued previously from /auth/token API.
             subject (str) : The unique identifier of the resource owner.
             properties (list of authlete.dto.Property)
+            headers (dict) : Additional HTTP headers.
 
         Returns:
             django.http.HttpResponse
@@ -66,10 +67,10 @@ class TokenRequestBaseHandler(BaseRequestHandler):
 
         if action == TokenIssueAction.INTERNAL_SERVER_ERROR:
             # 500 Internal Server Error
-            return ResponseUtility.internalServerError(content)
+            return ResponseUtility.internalServerError(content, headers)
         elif action == TokenIssueAction.OK:
             # 200 OK
-            return ResponseUtility.okJson(content)
+            return ResponseUtility.okJson(content, headers)
         else:
             # 500 Internal Server Error
             # The /api/auth/token/issue API returned an unknown action.
@@ -87,7 +88,7 @@ class TokenRequestBaseHandler(BaseRequestHandler):
         return self.api.tokenIssue(req)
 
 
-    def tokenFail(self, ticket, reason):
+    def tokenFail(self, ticket, reason, headers=None):
         """Call /api/auth/authorization/fail API.
 
         Args:
@@ -113,10 +114,10 @@ class TokenRequestBaseHandler(BaseRequestHandler):
 
         if action == TokenFailAction.INTERNAL_SERVER_ERROR:
             # 500 Internal Server Error
-            return ResponseUtility.internalServerError(content)
+            return ResponseUtility.internalServerError(content, headers)
         elif action == TokenFailAction.BAD_REQUEST:
             # 400 Bad Request
-            return ResponseUtility.badRequest(content)
+            return ResponseUtility.badRequest(content, headers)
         else:
             # 500 Internal Server Error
             # The /api/auth/token/fail API returned an unknown action.
