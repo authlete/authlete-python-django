@@ -56,6 +56,18 @@ class ResponseUtility(object):
 
 
     @classmethod
+    def acceptedJson(cls, content, headers=None):
+        # 202 Accepted, application/json;charset=UTF-8
+        return cls.__json(202, content, headers)
+
+
+    @classmethod
+    def acceptedJwt(cls, content, headers=None):
+        # 202 Accepted, application/jwt
+        return cls.__jwt(202, content, headers)
+
+
+    @classmethod
     def noContent(cls, headers=None):
         # 204 No Content
         return cls.__common(HttpResponse(status=204), headers)

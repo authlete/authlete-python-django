@@ -12,6 +12,8 @@ CHANGES
   - Add the `headers=None` argument to all the methods.
   - Add the `entityStatement` method.
   - Add the `created` method.
+  - Add the `acceptedJson` method.
+  - Add the `acceptedJwt` method.
   - Add the `tooLarge` method.
 
 - `TokenRequestBaseHandler` class

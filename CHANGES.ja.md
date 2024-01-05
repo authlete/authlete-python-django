@@ -11,6 +11,8 @@
 - `ResponseUtility` クラス
   - `headers=None` 引数を全てのメソッドに追加。
   - `entityStatement` メソッドを追加。
+  - `acceptedJson` メソッドを追加。
+  - `acceptedJwt` メソッドを追加。
   - `created` メソッドを追加。
   - `tooLarge` メソッドを追加。
 
