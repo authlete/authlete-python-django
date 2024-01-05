@@ -33,6 +33,7 @@
   - `jwtBearer` メソッドを追加。
 
 - 新しい型
+  - `CredentialIssuerJwksRequestHandler` クラス
   - `CredentialIssuerMetadataRequestHandler` クラス
   - `CredentialJwtIssuerMetadataRequestHandler` クラス
   - `FederationConfigurationRequestHandler` クラス

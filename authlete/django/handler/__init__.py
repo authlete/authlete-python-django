@@ -21,6 +21,7 @@ from .authorization_request_error_handler            import AuthorizationRequest
 from .base_request_handler                           import BaseRequestHandler
 from .claim_collector                                import ClaimCollector
 from .configuration_request_handler                  import ConfigurationRequestHandler
+from .credential_issuer_jwks_request_handler         import CredentialIssuerJwksRequestHandler
 from .credential_issuer_metadata_request_handler     import CredentialIssuerMetadataRequestHandler
 from .credential_jwt_issuer_metadata_request_handler import CredentialJwtIssuerMetadataRequestHandler
 from .federation_configuration_request_handler       import FederationConfigurationRequestHandler
