@@ -15,18 +15,19 @@
 # License.
 
 
-from .authorization_request_base_handler       import AuthorizationRequestBaseHandler
-from .authorization_request_decision_handler   import AuthorizationRequestDecisionHandler
-from .authorization_request_error_handler      import AuthorizationRequestErrorHandler
-from .base_request_handler                     import BaseRequestHandler
-from .claim_collector                          import ClaimCollector
-from .configuration_request_handler            import ConfigurationRequestHandler
-from .federation_configuration_request_handler import FederationConfigurationRequestHandler
-from .introspection_request_handler            import IntrospectionRequestHandler
-from .jwks_request_handler                     import JwksRequestHandler
-from .no_interaction_handler                   import NoInteractionHandler
-from .par_request_handler                      import ParRequestHandler
-from .revocation_request_handler               import RevocationRequestHandler
-from .token_request_base_handler               import TokenRequestBaseHandler
-from .token_request_handler                    import TokenRequestHandler
-from .userinfo_request_handler                 import UserInfoRequestHandler
+from .authorization_request_base_handler         import AuthorizationRequestBaseHandler
+from .authorization_request_decision_handler     import AuthorizationRequestDecisionHandler
+from .authorization_request_error_handler        import AuthorizationRequestErrorHandler
+from .base_request_handler                       import BaseRequestHandler
+from .claim_collector                            import ClaimCollector
+from .configuration_request_handler              import ConfigurationRequestHandler
+from .credential_issuer_metadata_request_handler import CredentialIssuerMetadataRequestHandler
+from .federation_configuration_request_handler   import FederationConfigurationRequestHandler
+from .introspection_request_handler              import IntrospectionRequestHandler
+from .jwks_request_handler                       import JwksRequestHandler
+from .no_interaction_handler                     import NoInteractionHandler
+from .par_request_handler                        import ParRequestHandler
+from .revocation_request_handler                 import RevocationRequestHandler
+from .token_request_base_handler                 import TokenRequestBaseHandler
+from .token_request_handler                      import TokenRequestHandler
+from .userinfo_request_handler                   import UserInfoRequestHandler

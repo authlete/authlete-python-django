@@ -33,6 +33,7 @@ CHANGES
   - Add the `jwtBearer` method.
 
 - New types
+  - `CredentialIssuerMetadataRequestHandler` class
   - `FederationConfigurationRequestHandler` class
   - `ParRequestHandler` class
 
