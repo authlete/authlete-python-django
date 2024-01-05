@@ -15,9 +15,10 @@
 # License.
 
 
-from authlete.django.handler.base_request_handler import BaseRequestHandler
-from authlete.django.web.response_utility         import ResponseUtility
-from authlete.dto.federation_configuration_action import FederationConfigurationAction
+from authlete.django.handler.base_request_handler  import BaseRequestHandler
+from authlete.django.web.response_utility          import ResponseUtility
+from authlete.dto.federation_configuration_action  import FederationConfigurationAction
+from authlete.dto.federation_configuration_request import FederationConfigurationRequest
 
 
 class FederationConfigurationRequestHandler(BaseRequestHandler):
@@ -55,7 +56,7 @@ class FederationConfigurationRequestHandler(BaseRequestHandler):
         """
 
         if request is None:
-            request = FederationConfigurationAction()
+            request = FederationConfigurationRequest()
 
         # Call Authlete's /federation/configuration API.
         res = self.api.federationConfiguration(request)
