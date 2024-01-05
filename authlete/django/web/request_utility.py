@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 Authlete, Inc.
+# Copyright (C) 2019-2024 Authlete, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,7 +16,9 @@
 
 
 import re
+import urllib.parse
 from django.conf import settings
+from authlete.django.web.basic_credentials import BasicCredentials
 
 
 class RequestUtility(object):
@@ -69,3 +71,45 @@ class RequestUtility(object):
             return None
 
         return mo.group('parameter')
+
+
+    @classmethod
+    def extractBasicCredentials(cls, request):
+        return BasicCredentials.parse(request.headers.get('Authorization'))
+
+
+    @classmethod
+    def extractClientCert(cls, request):
+        # RFC 9440 Client-Cert HTTP Header Field
+        clientCert = request.headers.get('Client-Cert')
+
+        if clientCert is not None:
+            # The value of 'Client-Cert' should be 'sf-binary', which is
+            # defined in RFC 8941 as follows.
+            #
+            #     sf-binary = ":" *(base64) ":"
+            #     base64    = ALPHA / DIGIT / "+" / "/" / "="
+            #
+
+            # Remove the colons at the beginning and at the end.
+            return clientCert[1:-1]
+
+        # Try a well-known HTTP header, X-Ssl-Cert
+        clientCert = request.headers.get('X-Ssl-Cert')
+
+        if clientCert is None:
+            return None
+
+        # "(null)" is a value that misconfigured Apache servers will send
+        # instead of a missing header. This happens when "SSLOptions" does
+        # not include "+ExportCertData".
+        if clientCert == '(null)':
+            return None
+
+        # Nginx's $ssl_client_escaped_cert holds a urlencoded client
+        # certificate in the PEM format.
+        if clientCert.startswith('-----BEGIN%20'):
+            # URL-decode
+            return urllib.parse.unquote(clientCert)
+
+        return clientCert

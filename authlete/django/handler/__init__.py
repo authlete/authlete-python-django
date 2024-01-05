@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 Authlete, Inc.
+# Copyright (C) 2019-2024 Authlete, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,6 +24,7 @@ from .configuration_request_handler          import ConfigurationRequestHandler
 from .introspection_request_handler          import IntrospectionRequestHandler
 from .jwks_request_handler                   import JwksRequestHandler
 from .no_interaction_handler                 import NoInteractionHandler
+from .par_request_handler                    import ParRequestHandler
 from .revocation_request_handler             import RevocationRequestHandler
 from .token_request_base_handler             import TokenRequestBaseHandler
 from .token_request_handler                  import TokenRequestHandler
