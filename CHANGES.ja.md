@@ -34,6 +34,7 @@
 
 - 新しい型
   - `CredentialIssuerMetadataRequestHandler` クラス
+  - `CredentialJwtIssuerMetadataRequestHandler` クラス
   - `FederationConfigurationRequestHandler` クラス
   - `FederationRegistrationRequestHandler` クラス
   - `ParRequestHandler` クラス

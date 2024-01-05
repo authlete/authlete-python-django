@@ -34,6 +34,7 @@ CHANGES
 
 - New types
   - `CredentialIssuerMetadataRequestHandler` class
+  - `CredentialJwtIssuerMetadataRequestHandler` class
   - `FederationConfigurationRequestHandler` class
   - `FederationRegistrationRequestHandler` class
   - `ParRequestHandler` class
