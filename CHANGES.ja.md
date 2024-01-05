@@ -35,6 +35,7 @@
 - 新しい型
   - `CredentialIssuerMetadataRequestHandler` クラス
   - `FederationConfigurationRequestHandler` クラス
+  - `FederationRegistrationRequestHandler` クラス
   - `ParRequestHandler` クラス
 
 1.0.1 (2019 年 09 月 19 日)

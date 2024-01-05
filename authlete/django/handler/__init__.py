@@ -23,6 +23,7 @@ from .claim_collector                            import ClaimCollector
 from .configuration_request_handler              import ConfigurationRequestHandler
 from .credential_issuer_metadata_request_handler import CredentialIssuerMetadataRequestHandler
 from .federation_configuration_request_handler   import FederationConfigurationRequestHandler
+from .federation_registration_request_handler    import FederationRegistrationRequestHandler
 from .introspection_request_handler              import IntrospectionRequestHandler
 from .jwks_request_handler                       import JwksRequestHandler
 from .no_interaction_handler                     import NoInteractionHandler

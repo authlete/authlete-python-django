@@ -35,6 +35,7 @@ CHANGES
 - New types
   - `CredentialIssuerMetadataRequestHandler` class
   - `FederationConfigurationRequestHandler` class
+  - `FederationRegistrationRequestHandler` class
   - `ParRequestHandler` class
 
 1.0.1 (2019-09-19)
