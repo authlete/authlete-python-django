@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 Authlete, Inc.
+# Copyright (C) 2019-2024 Authlete, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -44,8 +44,12 @@ clean-python:
 	@find . -name "*.py[cdo]" -exec rm -rf '{}' \;
 
 
+# Why you shouldn't invoke setup.py directly
+#   https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html
+#
 dist:
-	$(PYTHON) setup.py sdist bdist_wheel
+#	$(PYTHON) setup.py sdist bdist_wheel
+	$(PYTHON) -m build --sdist --wheel
 
 
 help:

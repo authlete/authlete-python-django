@@ -1,10 +1,9 @@
 HOW TO RELEASE
 ==============
 
-    $ vi setup.py
+    $ vi pyproject.toml
         # Update 'version'.
-        # Update 'packages' if necessary.
-    $ git add setup.py
+    $ git add pyproject.toml
     $ git commit
 
     $ make clean
@@ -12,3 +11,5 @@ HOW TO RELEASE
     $ make dist
     $ make release
 
+    $ git tag authlete-python-django-{version}
+    $ git push origin authlete-python-django-{version}

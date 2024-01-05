@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 Authlete, Inc.
+# Copyright (C) 2019-2024 Authlete, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="authlete-django",
-    version="1.0.1",
+    version="1.1.0",
     license="Apache License Version 2.0",
     author="Authlete, Inc.",
     author_email="admin@authlete.com",
@@ -44,6 +44,6 @@ setuptools.setup(
         "Topic :: Security",
     ],
     install_requires=[
-        "authlete",
+        "authlete>=1.3.0",
     ]
 )
