@@ -1,6 +1,9 @@
 CHANGES
 =======
 
+- `ConfigurationRequestHandler` class
+  - Update to align with the argument change of `AuthleteApi.getServiceConfiguration`.
+
 - `RequestUtility` class
   - Add the `extractBasicCredentials` method.
   - Add the `extractClientCert` method.

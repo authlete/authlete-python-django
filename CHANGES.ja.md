@@ -1,6 +1,9 @@
 変更点
 ======
 
+- `ConfigurationRequestHandler` クラス
+  - `AuthleteApi.getServiceConfiguration` の引数変更に合わせるために更新。
+
 - `RequestUtility` クラス
   - `extractBasicCredentials` メソッドを追加。
   - `extractClientCert` メソッドを追加。

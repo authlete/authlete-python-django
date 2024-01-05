@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 Authlete, Inc.
+# Copyright (C) 2019-2024 Authlete, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 
 from authlete.django.handler.base_request_handler import BaseRequestHandler
 from authlete.django.web.response_utility         import ResponseUtility
+from authlete.dto.service_configuration_request   import ServiceConfigurationRequest
 
 
 class ConfigurationRequestHandler(BaseRequestHandler):
@@ -65,9 +66,12 @@ class ConfigurationRequestHandler(BaseRequestHandler):
             authlete.api.AuthleteApiException
         """
 
-        # Call Authlete's /api/service/configuration API. The API returns
+        # Call Authlete's /service/configuration API. The API returns
         # JSON that complies with OpenID Connect Discovery 1.0.
-        jsn = self.api.getServiceConfiguration(pretty)
+        req = ServiceConfigurationRequest()
+        req.pretty = pretty
+
+        jsn = self.api.getServiceConfiguration(req)
 
         # 200 OK, application/json;charset=UTF-8
         return ResponseUtility.okJson(jsn)
