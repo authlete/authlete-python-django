@@ -44,6 +44,12 @@ class ResponseUtility(object):
 
 
     @classmethod
+    def entityStatement(cls, content, headers=None):
+        # 200 OK, application/entity-statement+jwt
+        return cls.__entityStatement(200, content, headers)
+
+
+    @classmethod
     def created(cls, content, headers=None):
         # 201 Created, application/json;charset=UTF-8
         return cls.__json(201, content, headers)
@@ -151,3 +157,8 @@ class ResponseUtility(object):
     @classmethod
     def __html(cls, status, content, headers):
         return cls.__response(status, content, headers, 'text/html')
+
+
+    @classmethod
+    def __entityStatement(cls, status, content, headers):
+        return cls.__response(status, content, headers, 'application/entity-statement+jwt')

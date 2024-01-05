@@ -10,6 +10,7 @@
 
 - `ResponseUtility` クラス
   - `headers=None` 引数を全てのメソッドに追加。
+  - `entityStatement` メソッドを追加。
   - `created` メソッドを追加。
   - `tooLarge` メソッドを追加。
 
@@ -32,6 +33,7 @@
   - `jwtBearer` メソッドを追加。
 
 - 新しい型
+  - `FederationConfigurationRequestHandler` クラス
   - `ParRequestHandler` クラス
 
 1.0.1 (2019 年 09 月 19 日)

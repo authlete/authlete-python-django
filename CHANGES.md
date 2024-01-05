@@ -10,6 +10,7 @@ CHANGES
 
 - `ResponseUtility` class
   - Add the `headers=None` argument to all the methods.
+  - Add the `entityStatement` method.
   - Add the `created` method.
   - Add the `tooLarge` method.
 
@@ -32,6 +33,7 @@ CHANGES
   - Add the `jwtBearer` method.
 
 - New types
+  - `FederationConfigurationRequestHandler` class
   - `ParRequestHandler` class
 
 1.0.1 (2019-09-19)
