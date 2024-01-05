@@ -53,10 +53,10 @@ class ConfigurationRequestHandler(BaseRequestHandler):
     def handle(self, request, pretty=True):
         """Handle a request to a configuration endpoint.
 
-        This method calls Authlete's /api/service/configuration API.
+        This method calls Authlete's /service/configuration API.
 
         Args:
-            requet (django.http.HttpRequest)
+            request (django.http.HttpRequest)
             pretty (bool)
 
         Returns:
