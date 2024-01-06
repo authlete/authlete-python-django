@@ -23,6 +23,7 @@ from authlete.django.web.basic_credentials import BasicCredentials
 
 class RequestUtility(object):
     BEARER_PATTERN = re.compile('^Bearer *(?P<parameter>[^ ]+) *$', re.I)
+    DPOP_PATTERN   = re.compile('^DPoP *(?P<parameter>[^ ]+) *$', re.I)
 
 
     @classmethod
@@ -71,6 +72,39 @@ class RequestUtility(object):
             return None
 
         return mo.group('parameter')
+
+
+    @classmethod
+    def extractDpopToken(cls, request):
+        # Get the value of the Authorization header.
+        authorization = cls.extractAuthorization(request)
+        if authorization is None:
+            return None
+
+        # Expecting the value matches "DPoP {token}"
+        mo = cls.DPOP_PATTERN.match(authorization)
+
+        # If the value does not match the pattern.
+        if mo is None:
+            return None
+
+        return mo.group('parameter')
+
+
+    @classmethod
+    def extractAccessToken(cls, request):
+        # Try to extract a token from "Bearer {token}"
+        accessToken = cls.extractBearerToken(request)
+        if accessToken is not None:
+            return accessToken
+
+        # Try to extract a token from "DPoP {token}"
+        accessToken = cls.extractDpopToken(request)
+        if accessToken is not None:
+            return accessToken
+
+        # No access token is available.
+        return None
 
 
     @classmethod

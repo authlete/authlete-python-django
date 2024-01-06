@@ -5,8 +5,10 @@
   - `AuthleteApi.getServiceConfiguration` の引数変更に合わせるために更新。
 
 - `RequestUtility` クラス
+  - `extractAccessToken` メソッドを追加。
   - `extractBasicCredentials` メソッドを追加。
   - `extractClientCert` メソッドを追加。
+  - `extractDpopToken` メソッドを追加。
 
 - `ResponseUtility` クラス
   - `headers=None` 引数を全てのメソッドに追加。
@@ -33,6 +35,10 @@
 - `TokenRequestHandlerSpiAdapter` クラス
   - `tokenExchange` メソッドを追加。
   - `jwtBearer` メソッドを追加。
+
+- `UserInfoRequestHandler` クラス
+  - MTLS (RFC 8705) をサポート。
+  - DPoP (RFC 9449) をサポート。
 
 - 新しい型
   - `CredentialIssuerJwksRequestHandler` クラス

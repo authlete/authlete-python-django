@@ -5,8 +5,10 @@ CHANGES
   - Update to align with the argument change of `AuthleteApi.getServiceConfiguration`.
 
 - `RequestUtility` class
+  - Add the `extractAccessToken` method.
   - Add the `extractBasicCredentials` method.
   - Add the `extractClientCert` method.
+  - Add the `extractDpopToken` method.
 
 - `ResponseUtility` class
   - Add the `headers=None` argument to all the methods.
@@ -33,6 +35,10 @@ CHANGES
 - `TokenRequestHandlerSpiAdapter` class
   - Add the `tokenExchange` method.
   - Add the `jwtBearer` method.
+
+- `UserInfoRequestHandler` class
+  - Support MTLS (RFC 8705).
+  - Support DPoP (RFC 9449).
 
 - New types
   - `CredentialIssuerJwksRequestHandler` class
