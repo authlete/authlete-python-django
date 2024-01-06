@@ -131,7 +131,7 @@ class ResponseUtility(object):
 
 
     @classmethod
-    def __response(cls, status, content, content_type, headers, charset='UTF-8'):
+    def __response(cls, status, content, headers, content_type, charset='UTF-8'):
         response = HttpResponse(
             status=status, content=content,
             content_type=content_type, charset=charset)
