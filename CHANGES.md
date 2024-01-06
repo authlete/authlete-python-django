@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.1.1 (2024-01-07)
+------------------
+
+- `ResponseUtility` class
+  - Fixed a bug in the `__response` method.
+
 1.1.0 (2024-01-07)
 ------------------
 
