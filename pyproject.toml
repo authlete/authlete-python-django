@@ -33,3 +33,8 @@ classifiers = [
 [project.urls]
 Homepage = "https://www.authlete.com/"
 Repository = "https://github.com/authlete/authlete-python-django.git"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+  "/authlete"
+]
