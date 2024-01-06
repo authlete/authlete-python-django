@@ -1,6 +1,9 @@
 変更点
 ======
 
+1.1.0 (2024 年 01 月 07 日)
+---------------------------
+
 - `ConfigurationRequestHandler` クラス
   - `AuthleteApi.getServiceConfiguration` の引数変更に合わせるために更新。
 

@@ -1,6 +1,9 @@
 CHANGES
 =======
 
+1.1.0 (2024-01-07)
+------------------
+
 - `ConfigurationRequestHandler` class
   - Update to align with the argument change of `AuthleteApi.getServiceConfiguration`.
 
